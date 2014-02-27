@@ -29,11 +29,12 @@
     "htmlparser": "latest",
     "soupselect": "latest",
     "jsdom": "latest",
-    "underscore": "latest"
+    "underscore": "latest",
+    "optparse": "1.0.5"
   },
 
   "engines": {
     "node": ">= 0.8.x",
-    "npm":  ">= 1.1.x"
+    "npm":  ">= 1.4.x"
   }
 }
