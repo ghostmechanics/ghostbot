@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   empathy xkcd - The latest XKCD comic
-#   empathy xkcd <num> - XKCD comic <num>
+#   hubot xkcd - The latest XKCD comic
+#   hubot xkcd <num> - XKCD comic <num>
 #
 # Author:
 #   twe4ked
