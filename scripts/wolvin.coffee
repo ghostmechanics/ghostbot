@@ -37,5 +37,5 @@ wolvins = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /hubot wolvin me/i, (msg) ->
+  robot.hear /wolvin me/i, (msg) ->
     msg.send msg.random wolvins
