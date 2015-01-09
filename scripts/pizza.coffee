@@ -2,7 +2,7 @@
 #   Displays a random pizza gif from animatedpizzagifs.com
 #
 # Dependencies:
-#   "jsdom": "latest"
+#   "jsdom": "~0.2.13"
 #
 # Configuration:
 #   None
