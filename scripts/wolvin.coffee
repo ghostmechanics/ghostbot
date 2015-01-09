@@ -33,7 +33,15 @@ wolvins = [
   "http://www.chucknorris.com/store/cn%20old%20pages/photos_files/karate-5.jpg",
   "http://i28.photobucket.com/albums/c219/talk2action/chuck_3-1.png",
   "http://cdn.screenrant.com/wp-content/uploads/No-Expendables-3-for-Chuck-Norris.jpg",
-  "http://media1.break.com/breakstudios/2012/2/20/delta.jpg"
+  "http://media1.break.com/breakstudios/2012/2/20/delta.jpg",
+  "http://i.imgur.com/FkAnlZu.gif",
+  "http://heavyeditorial.files.wordpress.com/2012/09/chuck-norris-approves.gif?w=780",
+  "http://heavyeditorial.files.wordpress.com/2012/09/chuck-norris-super-kick.gif?w=780",
+  "http://stream1.gifsoup.com/view4/3479312/chuck-norris-bear-o.gif",
+  "http://heavyeditorial.files.wordpress.com/2012/09/chuckpunch1.gif?w=780",
+  "http://heavyeditorial.files.wordpress.com/2012/09/chuck-norris-grenade.gif?w=780",
+  "http://heavyeditorial.files.wordpress.com/2012/09/chuck-norris-vs-xabi-alonso.gif?w=780",
+  "http://heavyeditorial.files.wordpress.com/2012/09/chuck-norris-walker_o_gifsoup-com_1.gif?w=780"
 ]
 
 module.exports = (robot) ->
