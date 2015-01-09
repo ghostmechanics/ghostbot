@@ -11,7 +11,7 @@
 #   hubot wolvin me - Display a randon Chuck Norris
 #
 # Author:
-#   pingles
+#   ryandudek
 
 wolvins = [
   "http://img3.wikia.nocookie.net/__cb20080312162141/uncyclopedia/images/d/dc/Chuck-norris-002.jpg",
@@ -37,5 +37,5 @@ wolvins = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /wolvin me/i, (msg) ->
+  robot.respond /wolvin me$/i, (msg) ->
     msg.send msg.random wolvins
