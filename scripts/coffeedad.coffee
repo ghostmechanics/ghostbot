@@ -2,7 +2,7 @@
 #   gets tweet from user
 #
 # Dependencies:
-#   "jsdom": "~0.2.13"
+#   "jsdom": "latest"
 #
 # Configuration:
 #   None
@@ -11,7 +11,7 @@
 #   coffee - Show random tweet from @coffee_dad
 #
 # Author:
-#   RyanDudek
+#   ryandudek
 #
 
 jsdom = require "jsdom"
@@ -20,10 +20,10 @@ coffeetweets = "https://twitter.com/coffee_dad"
 module.exports = (robot) ->
   robot.hear /coffee/i, (msg) ->
     msg.http(coffeetweets)
-      .path("/")
       .get() (err, res, body) ->
         document = jsdom.jsdom body, null, features: { "QuerySelector": true, "QuerySelectorAll": true }
-        tweet =  msg.random document.querySelectorAll "div.ProfileCanopy-avatar img"
-        console.log(tweet)
-        msg.send "#{coffeetweets}/#{tweet.src}"
+        tweet =  msg.random document.querySelectorAll "a.ProfileTweet-timestamp.js-permalink"
+        tweet = tweet.href
+        tweet = tweet.replace("file:///","")
+        msg.send "https://twitter.com/#{tweet}"
         
