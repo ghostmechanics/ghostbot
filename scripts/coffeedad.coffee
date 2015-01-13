@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   coffee - Show random tweet from @coffee_dad
+#   hubot coffee me - Show random tweet from @coffee_dad
 #
 # Author:
 #   ryandudek
@@ -18,7 +18,7 @@ jsdom = require "jsdom"
 coffeetweets = "https://twitter.com/coffee_dad"
 
 module.exports = (robot) ->
-  robot.hear /coffee/i, (msg) ->
+  robot.respond /coffee me/i, (msg) ->
     msg.http(coffeetweets)
       .get() (err, res, body) ->
         document = jsdom.jsdom body, null, features: { "QuerySelector": true, "QuerySelectorAll": true }

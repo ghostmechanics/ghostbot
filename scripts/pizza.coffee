@@ -23,4 +23,6 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         document = jsdom.jsdom body, null, features: { "QuerySelector": true, 'ProcessExternalResources': false }
         img = msg.random document.querySelectorAll "li img"
-        msg.send "#{PIZZA}/#{img.src}"
+        img = img.src
+        img = img.replace("file:///","")
+        msg.send "#{PIZZA}/#{img}"
