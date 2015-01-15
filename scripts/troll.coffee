@@ -8,11 +8,11 @@
 #   None
 #
 # Commands:
-#   troll - Shun the trolls
+#   hubot troll - Shun the trolls
 #
 # Notes:
 #   Based on maddox's `ship it` script
-# 
+#
 # Author:
 #   johnmichel
 
@@ -42,5 +42,5 @@ trolls = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /troll/i, (msg) ->
+  robot.respond /troll/i, (msg) ->
     msg.send msg.random trolls
