@@ -27,5 +27,5 @@ ackbars = [
 module.exports = (robot) ->
   robot.hear /it'?s a trap\b/i, (msg) ->
     msg.send msg.random ackbars
-  robot.hear /it'?s a tarp\b/i (msg) ->
+  robot.hear /it'?s a tarp\b/i, (msg) ->
     msg.send "http://f.cl.ly/items/0e1b2i3Z1I3q321W0U0H/itsatarp.jpg"
