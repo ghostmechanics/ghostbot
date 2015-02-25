@@ -44,6 +44,29 @@ wolvins = [
   "http://heavyeditorial.files.wordpress.com/2012/09/chuck-norris-walker_o_gifsoup-com_1.gif?w=780"
 ]
 
+antiwolvins = [
+  "http://media.giphy.com/media/iJxHzcuNcCJXi/giphy.gif",
+  "http://media.giphy.com/media/emIqCMNbdlcfC/giphy.gif",
+  "http://media.giphy.com/media/K2MCNcHBSRc88/giphy.gif",
+  "http://media.giphy.com/media/xn2BRZmrIJxmM/giphy.gif",
+  "http://media.giphy.com/media/asIa0FVaBSQNO/giphy.gif",
+  "http://media.giphy.com/media/uteZlEPLc0KI0/giphy.gif",
+  "http://media.giphy.com/media/kqLX1Y4rLBN3q/giphy.gif",
+  "http://media.giphy.com/media/gX0wdXBYL8Ius/giphy.gif",
+  "http://media.giphy.com/media/tInuiWy5wTxq8/giphy.gif",
+  "http://media.giphy.com/media/9wBub5vhSsTDi/giphy.gif",
+  "http://media.giphy.com/media/nu6XLY6QHeUk8/giphy.gif",
+  "http://media.giphy.com/media/Z3bhpcoNdnDig/giphy.gif",
+  "http://media.giphy.com/media/LRVIib7uXMVe8/giphy.gif",
+  "http://media.giphy.com/media/lj935f7J3guGc/giphy.gif",
+  "http://media.giphy.com/media/DswIGscWQQcqA/giphy.gif"
+]
+
 module.exports = (robot) ->
   robot.respond /wolvin me$/i, (msg) ->
-    msg.send msg.random wolvins
+    sender = msg.message.user.name.toLowerCase()
+
+    if sender is 'wolverine'
+      msg.send msg.random antiwolvins
+    else 
+      msg.send msg.random wolvins
