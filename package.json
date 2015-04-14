@@ -28,10 +28,13 @@
     "hubot-slack": "latest",
     "htmlparser": "latest",
     "soupselect": "latest",
+    "fuzzy": "^0.1.0",
     "jsdom": ">=3.1.2 < 4.0.0",
-    "underscore": "1.4.4",
+    "lodash": "^3.6.0",
     "optparse": "1.0.5",
-    "twit": "1.1.6"
+    "request": "^2.51.0",
+    "twit": "1.1.6",
+    "underscore": "1.4.4"
   },
 
   "engines": {
