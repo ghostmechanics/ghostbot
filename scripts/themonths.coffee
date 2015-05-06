@@ -32,3 +32,11 @@ months = [
 module.exports = (robot) ->
   robot.respond /the months$/i, (msg) ->
     msg.send months.join('\n')
+
+module.exports = (robot) ->
+  robot.respond /(the date)|today$/i, (msg) ->
+    theDate = new Date
+    currentMonthNum = theDate.getMonth() + 1
+    currentMonth = months[currentMonthNum]
+    currentDate = currentMonth + ' ' + theDate.getDate() + ', ' +theDate.getFullYear()
+    msg.send currentDate
