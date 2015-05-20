@@ -20,7 +20,7 @@ module.exports = (robot) ->
   robot.hear /you are butthurt\?*$/i, (msg) ->
     msg.send "Duhhhh"
 
-  robot.respond /is @?([\w .\-]+)\?* butthurt\?*$/i, (msg) ->
+  robot.hear /is @?([\w .\-]+)\?* butthurt\?*$/i, (msg) ->
     joiner = ', '
     name = msg.match[1].trim()
 
@@ -38,7 +38,7 @@ module.exports = (robot) ->
       else
         msg.send "I've never heard of #{name}, but they are definitely butthurt"
 
-  robot.hear /@?([\w .\-_]+) is butthurt[.!]*$/i, (msg) ->
+  robot.respond /@?([\w .\-_]+) is butthurt[.!]*$/i, (msg) ->
     joiner = ', '
     name = msg.match[1].trim()
 
