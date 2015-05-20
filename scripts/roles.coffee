@@ -56,6 +56,8 @@ module.exports = (robot) ->
 
           if newRole in user.roles
             msg.send "I know"
+          else if newRole is "butthurt"
+            return false
           else
             user.roles.push(newRole)
             if name.toLowerCase() is robot.name.toLowerCase()
@@ -65,7 +67,10 @@ module.exports = (robot) ->
         else if users.length > 1
           msg.send getAmbiguousUserText users
         else
-          msg.send "I don't know anything about #{name}."
+          if newRole is "butthurt"
+            return false
+          else
+            msg.send "I don't know anything about #{name}."
 
   robot.respond /@?([\w .\-_]+) is not (["'\w: \-_]+)[.!]*$/i, (msg) ->
     name    = msg.match[1].trim()
@@ -79,11 +84,16 @@ module.exports = (robot) ->
 
         if newRole not in user.roles
           msg.send "I know."
+        else if newRole
+          msg.send "Yes they are..."
         else
           user.roles = (role for role in user.roles when role isnt newRole)
           msg.send "Ok, #{name} is no longer #{newRole}."
       else if users.length > 1
         msg.send getAmbiguousUserText users
       else
-        msg.send "I don't know anything about #{name}."
+        if newRole is "butthurt"
+          msg.send "ಠ_ಠ YES THEY ARE"
+        else
+          msg.send "I don't know anything about #{name}."
 

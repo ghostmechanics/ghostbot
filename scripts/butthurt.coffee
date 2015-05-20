@@ -14,13 +14,17 @@ module.exports = (robot) ->
   getAmbiguousUserText = (users) ->
     "Be more specific, I know #{users.length} people named like: #{(user.name for user in users).join(", ")} (and they are all butthurt)"
 
-  robot.respond /is @?([\w .\-]+)\?* butthurt\?*$/i, (msg) ->
+  robot.hear /are you butthurt\?*$/i, (msg) ->
+    msg.send "Who isn't?"
+
+  robot.hear /you are butthurt\?*$/i, (msg) ->
+    msg.send "Duhhhh"
+
+  robot.hear /is @?([\w .\-]+)\?* butthurt\?*$/i, (msg) ->
     joiner = ', '
     name = msg.match[1].trim()
 
-    if name is "you"
-      msg.send "I like butts, but I'm not butthurt"
-    else if name is robot.name
+    if name is robot.name
       msg.send "I'm definitely not thinking about butts"
     else if name is "bell"
       msg.send "bell is the worst ever (and is totally butthurt)"
@@ -38,9 +42,7 @@ module.exports = (robot) ->
     joiner = ', '
     name = msg.match[1].trim()
 
-    if name is "you"
-      msg.send "No comment..."
-    else if name is robot.name
+    if name is robot.name
       msg.send "I'm definitely not thinking about butts"
     else if name is "bell"
       msg.send "bell is the worst ever (and is totally butthurt)"
