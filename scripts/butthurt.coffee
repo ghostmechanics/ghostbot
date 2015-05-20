@@ -20,7 +20,7 @@ module.exports = (robot) ->
   robot.hear /you are butthurt\?*$/i, (msg) ->
     msg.send "Duhhhh"
 
-  robot.listen /is @?([\w .\-]+)\?* butthurt\?*$/i, (msg) ->
+  robot.respond /is @?([\w .\-]+)\?* butthurt\?*$/i, (msg) ->
     joiner = ', '
     name = msg.match[1].trim()
 
