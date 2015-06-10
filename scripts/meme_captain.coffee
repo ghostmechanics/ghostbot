@@ -7,7 +7,6 @@
 # Commands:
 #   hubot Y U NO <text> - Generates the Y U NO GUY with the bottom caption of <text>
 #   hubot I don't always <something> but when i do <text> - Generates The Most Interesting man in the World
-#   hubot <text> (SUCCESS|NAILED IT) - Generates success kid with the top caption of <text>
 #   hubot <text> ALL the <things> - Generates ALL THE THINGS
 #   hubot <text> TOO DAMN <high> - Generates THE RENT IS TOO DAMN HIGH guy
 #   hubot Yo dawg <text> so <text> - Generates Yo Dawg
@@ -49,10 +48,6 @@ module.exports = (robot) ->
 
   robot.respond /(I DON'?T ALWAYS .*) (BUT WHEN I DO,? .*)/i, (msg) ->
     memeGenerator msg, 'http://memecaptain.com/most_interesting.jpg', msg.match[1], msg.match[2], (url) ->
-      msg.send url
-
-  robot.respond /(.*)(SUCCESS|NAILED IT.*)/i, (msg) ->
-    memeGenerator msg, 'http://memecaptain.com/success_kid.jpg', msg.match[1], msg.match[2], (url) ->
       msg.send url
 
   robot.respond /(.*) (\w+\sTOO DAMN .*)/i, (msg) ->
