@@ -30,7 +30,7 @@ module.exports = (robot) ->
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
   cb = faces if typeof faces == 'function'
-  q = v: '1.0', rsz: '8', q: query, safe: 'moderate'
+  q = v: '1.0', rsz: '8', q: query, safe: 'off'
   q.imgtype = 'animated' if typeof animated is 'boolean' and animated is true
   # hack to work around google dropping the animated imgtype
   # https://developers.google.com/image-search/v1/jsondevguide?hl=en#optional_args
